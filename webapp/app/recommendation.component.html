@@ -1,0 +1,12 @@
+<div>
+  Movie Search: <input id="search-text-field" type="search" value="{{searchTerm}}" placeholder="movie name" #try>
+  <button id="search-button" type="submit" (click)="searchMovies()">Search</button>
+
+  <div *ngFor="let movie of movies">
+    <img src="{{movie.results.poster_path}}">
+  </div>
+
+</div>
+<p>Recommendation:
+
+</p>

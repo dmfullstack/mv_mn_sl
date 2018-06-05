@@ -1,0 +1,35 @@
+<div>
+  <section id="trending">
+    TRENDING MOVIES:
+    <div *ngFor="let trendingMovie of trendingMoviesList">
+      <div class="movie-card">
+        <p class="movie-description">{{trendingMovie.overview}}</p>
+        <p class="movie-title">{{trendingMovie.title}}</p>
+        <img class="movie-poster" src="{{this.imageURI+trendingMovie.poster_path}}">
+        <p class="movie-rating">{{trendingMovie.vote_average}}</p>
+      </div>
+    </div>
+  </section>
+  <section id="forthcoming">
+   FORTHCOMING MOVIES:
+    <div *ngFor="let upcomingMovie of upcomingMoviesList">
+      <div class="movie-card">
+      <p class="movie-description">{{upcomingMovie.overview}}</p>
+        <p class="movie-title">{{upcomingMovie.title}}</p>
+        <img class="movie-poster" src="{{this.imageURI+upcomingMovie.poster_path}}">
+        <p class="movie-rating">{{upcomingMovie.vote_average}}</p>
+      </div>
+    </div>
+  </section>
+  <section id="recommendations">
+  RECOMMENDED MOVIES:
+    <div *ngFor="let recommendedMovie of recommendedMoviesList">
+      <div class="movie-card">
+        <p class="movie-description">{{recommendedMovie.overview}}</p>
+        <p class="movie-title">{{recommendedMovie.title}}</p>
+        <img class="movie-poster" src="{{this.imageURI+recommendedMovie.poster_path}}">
+        <p class="movie-rating">{{recommendedMovie.vote_average}}</p>
+      </div>
+    </div>
+  </section>
+</div>
